@@ -39,7 +39,7 @@ public class MainFrame extends JFrame {
 
         Action openGraphicsAction = new AbstractAction("Открыть файл с графиком") { // Создать действие по открытию файла
         public void actionPerformed(ActionEvent event) {
-            if (fileChooser==null) {
+            if (fileChooser == null) {
                 fileChooser = new JFileChooser();
                 fileChooser.setCurrentDirectory(new File("."));
             }
