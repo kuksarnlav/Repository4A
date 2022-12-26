@@ -62,10 +62,11 @@ public class MainFrame extends JFrame {
         showAxisMenuItem.setSelected(true); // Элемент по умолчанию включен (отмечен флажком)
         // Повторить действия для элемента "Показывать маркеры точек"
         Action showMarkersAction = new AbstractAction("Показывать маркеры точек") {
-public void actionPerformed(ActionEvent event) { // по аналогии с showAxisMenuItem
-        display.setShowMarkers(showMarkersMenuItem.isSelected());
-}
+            public void actionPerformed(ActionEvent event) { // по аналогии с showAxisMenuItem
+                display.setShowMarkers(showMarkersMenuItem.isSelected());
+            }
         };
+
         showMarkersMenuItem = new JCheckBoxMenuItem(showMarkersAction);
         graphicsMenu.add(showMarkersMenuItem);
         showMarkersMenuItem.setSelected(true); // Элемент по умолчанию включен (отмечен флажком)

@@ -174,7 +174,7 @@ public class GraphicsDisplay extends JPanel {
             canvas.draw(marker); // Начертить контур маркера
         }*/
     }
-    protected boolean Even(double y) {
+    boolean Even(double y) {
         //marker paint
         int intFunc = (int) y;
             if( intFunc % 2 == 0)
@@ -209,6 +209,8 @@ public class GraphicsDisplay extends JPanel {
             Point2D.Double labelPos = xyToPoint(0, maxY); // Определить, сколько места понадобится для надписи "y"
             // Вывести надпись в точке с вычисленными координатами
             canvas.drawString("y", (float) labelPos.getX() + 10, (float) (labelPos.getY() - bounds.getY()));
+/*            Point2D.Double labelPosZero = xyToPoint(0, 0);
+            canvas.drawString("0", (float) labelPosZero.getX() + 10, (float) (labelPos.getY() - bounds.getY()));*/
         }
 
         if (minY <= 0.0 && maxY >= 0.0) { // Определить, должна ли быть видна ось X на графике
@@ -233,6 +235,8 @@ public class GraphicsDisplay extends JPanel {
 
             // Вывести надпись в точке с вычисленными координатами
             canvas.drawString("x", (float) (labelPos.getX() - bounds.getWidth() - 10), (float) (labelPos.getY() + bounds.getY()));
+            Point2D.Double labelPosZero = xyToPoint(0, 0);
+            canvas.drawString("0", (float) labelPosZero.getX() + 10, (float) (labelPos.getY() - bounds.getY()));
         }
     }
     // Метод-помощник, осуществляющий преобразование координат.  Оно необходимо, т.к. верхнему левому углу холста с координатам
